@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-playfair), "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-navy-900: #16283F;
+  --color-navy-800: #1C3350;
+  --color-brand-blue: #1769B0;
+  --color-bright-blue: #1677C8;
+  --color-light-blue: #EAF5FC;
+  --color-verylight-blue: #F5FAFE;
+  --color-text-main: #26384A;
+  --color-text-muted: #718096;
+  --color-brand-border: #E5EDF4;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #26384A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Typography Helpers */
+.font-heading {
+  font-family: var(--font-playfair), "Cormorant Garamond", Georgia, serif;
+}
+
+.bg-navy {
+  background-color: #16283F;
+}
+
+.text-navy {
+  color: #16283F;
+}
+
+.bg-brand-blue {
+  background-color: #1769B0;
+}
+
+.text-brand-blue {
+  color: #1769B0;
+}
+
+.border-brand-blue {
+  border-color: #1769B0;
+}
+
+.bg-bright-blue {
+  background-color: #1677C8;
+}
+
+.bg-light-blue {
+  background-color: #EAF5FC;
+}
+
+.bg-verylight-blue {
+  background-color: #F5FAFE;
+}
+
+.border-brand {
+  border-color: #E5EDF4;
+}
+
+.text-main {
+  color: #26384A;
+}
+
+.text-muted {
+  color: #718096;
+}
+
+/* Custom architectural scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5FAFE;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1769B0;
+}
