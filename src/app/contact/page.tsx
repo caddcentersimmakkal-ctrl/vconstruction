@@ -51,7 +51,7 @@ export default function ContactPage() {
             Book an Architectural Consultation
           </h1>
           <p className="text-[#718096] text-[15px] max-w-[620px] mt-2">
-            Have an upcoming residential villa, commercial space, or renovation project? Speak directly with our lead architects and project engineers.
+            Have an upcoming residential villa, commercial space? Speak directly with our lead architects and project engineers.
           </p>
         </div>
       </section>
@@ -248,9 +248,7 @@ export default function ContactPage() {
                         <option value="Residential Construction">Residential Construction</option>
                         <option value="Commercial Construction">Commercial Construction</option>
                         <option value="Interior Design">Interior Design</option>
-                        <option value="Renovation & Remodeling">Renovation & Remodeling</option>
-                        <option value="Architectural Design">Architectural Design</option>
-                        <option value="Project Management">Project Management</option>
+                        <option value="Plots & Real Estate">Plots & Real Estate</option>
                       </select>
                     </div>
 

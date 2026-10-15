@@ -56,7 +56,7 @@ export const HeroSection: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, 4000);
     return () => clearInterval(timer);
   }, []);
 
@@ -72,9 +72,9 @@ export const HeroSection: React.FC = () => {
 
   return (
     <section className="relative w-full overflow-hidden bg-gradient-to-r from-[#EAF5FC] via-[#F5FAFE] to-white border-b border-[#E5EDF4]">
-      <div className="max-w-[1700px] mx-auto min-h-[380px] lg:min-h-[420px] flex flex-col lg:flex-row items-center relative">
+      <div className="max-w-[1700px] mx-auto min-h-[380px] lg:min-h-[480px] flex flex-col lg:flex-row items-center relative">
         {/* LEFT TEXT CONTAINER (Approx 45% width) */}
-        <div className="w-full lg:w-[46%] px-6 sm:px-8 lg:pl-8 lg:pr-6 py-10 lg:py-14 z-10 flex flex-col justify-center">
+        <div className="w-full lg:w-[40%] px-6 sm:px-8 lg:pl-8 lg:pr-6 py-10 lg:py-14 z-10 flex flex-col justify-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={slide.id}
@@ -115,7 +115,7 @@ export const HeroSection: React.FC = () => {
         </div>
 
         {/* RIGHT IMAGE CONTAINER (Approx 54% width) */}
-        <div className="w-full lg:w-[54%] h-[280px] sm:h-[350px] lg:h-[420px] relative overflow-hidden">
+        <div className="w-full lg:w-[60%] h-[280px] sm:h-[350px] lg:h-[480px] relative overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
               key={slide.id}

@@ -61,15 +61,12 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full bg-white border-b transition-all duration-300 ${
-        scrolled ? "border-[#E5EDF4] shadow-sm py-3" : "border-[#E5EDF4] py-3.5"
-      }`}
-      style={{ height: "76px" }}
-    >
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
+
+    <header className={`sticky top-0 z-50 relative w-full border-b bg-white transition-all duration-300 ${scrolled ? "border-[#E5EDF4] shadow-sm" : "border-[#E5EDF4]"}`}>
+      <div className="mx-auto flex h-[72px] max-w-[1280px] items-center justify-between gap-3 px-4 sm:px-5 lg:h-[76px] lg:px-8">
+
         {/* LOGO */}
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex min-w-0 shrink-0 items-center gap-2 sm:gap-3 group">
           {/* Architectural Diamond Icon Matching Reference */}
           <div className="relative w-10 h-10 flex items-center justify-center">
             <svg
@@ -98,7 +95,8 @@ export const Header: React.FC = () => {
             </svg>
           </div>
           <div className="flex flex-col">
-            <span className="text-[#16283F] font-bold text-[15px] sm:text-[16px] tracking-tight leading-tight uppercase font-sans">
+
+            <span className="whitespace-nowrap font-sans text-[13px] font-bold leading-tight tracking-tight text-[#16283F] sm:text-[15px] lg:text-[16px]">
               V CONSTRUCTION
             </span>
             <span className="text-[#1769B0] font-medium text-[10px] tracking-[0.18em] uppercase leading-none mt-0.5">
@@ -111,7 +109,8 @@ export const Header: React.FC = () => {
         </Link>
 
         {/* DESKTOP NAVIGATION */}
-        <nav className="hidden md:flex items-center space-x-7 lg:space-x-9 text-[14px] font-medium text-[#26384A]">
+
+        <nav className="hidden lg:flex shrink-0 items-center gap-4 xl:gap-7 text-[13px] xl:text-[14px] font-medium text-[#26384A]">
           {navItems.map((item) => {
             const active = isActive(item.href);
             return (
@@ -129,9 +128,8 @@ export const Header: React.FC = () => {
               >
                 <Link
                   href={item.href}
-                  className={`flex items-center gap-1.5 transition-colors py-1 ${
-                    active ? "text-[#1769B0] font-semibold" : "hover:text-[#1769B0]"
-                  }`}
+                  className={`flex items-center gap-1.5 transition-colors py-1 ${active ? "text-[#1769B0] font-semibold" : "hover:text-[#1769B0]"
+                    }`}
                 >
                   {item.label}
                   {item.hasDropdown && (
@@ -147,11 +145,10 @@ export const Header: React.FC = () => {
                 {/* Dropdown Menu */}
                 {item.hasDropdown && item.dropdownItems && (
                   <div
-                    className={`absolute top-full left-0 w-56 bg-white border border-[#E5EDF4] rounded-lg shadow-lg py-2 transition-all duration-200 z-50 ${
-                      (item.label === "Services" && servicesOpen) || (item.label === "Projects" && projectsOpen)
-                        ? "opacity-100 visible translate-y-0"
-                        : "opacity-0 invisible translate-y-2"
-                    }`}
+                    className={`absolute top-full left-0 w-56 bg-white border border-[#E5EDF4] rounded-lg shadow-lg py-2 transition-all duration-200 z-50 ${(item.label === "Services" && servicesOpen) || (item.label === "Projects" && projectsOpen)
+                      ? "opacity-100 visible translate-y-0"
+                      : "opacity-0 invisible translate-y-2"
+                      }`}
                   >
                     {item.dropdownItems.map((sub) => (
                       <Link
@@ -170,7 +167,7 @@ export const Header: React.FC = () => {
         </nav>
 
         {/* DESKTOP CTA BUTTON */}
-        <div className="hidden md:flex items-center">
+        <div className="hidden lg:flex shrink-0 items-center">
           <Link
             href="/contact"
             className="inline-flex items-center gap-2.5 bg-[#1769B0] hover:bg-[#1677C8] text-white text-[13px] font-medium px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
@@ -183,7 +180,7 @@ export const Header: React.FC = () => {
         {/* MOBILE HAMBURGER BUTTON */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 text-[#16283F] hover:text-[#1769B0] focus:outline-none"
+          className="shrink-0 p-2 text-[#16283F] hover:text-[#1769B0] focus:outline-none lg:hidden"
           aria-label="Toggle Navigation Menu"
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -192,16 +189,15 @@ export const Header: React.FC = () => {
 
       {/* MOBILE DRAWER */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-[#E5EDF4] px-6 py-6 shadow-xl space-y-4 animate-in slide-in-from-top duration-300">
+        <div className="absolute left-0 top-full z-50 w-full border-b border-[#E5EDF4] bg-white px-6 py-6 shadow-xl lg:hidden animate-in slide-in-from-top duration-300">
           <div className="flex flex-col space-y-3">
             {navItems.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`py-2 text-[15px] font-medium border-b border-[#E5EDF4]/60 flex items-center justify-between ${
-                  isActive(item.href) ? "text-[#1769B0] font-semibold" : "text-[#26384A]"
-                }`}
+                className={`py-2 text-[15px] font-medium border-b border-[#E5EDF4]/60 flex items-center justify-between ${isActive(item.href) ? "text-[#1769B0] font-semibold" : "text-[#26384A]"
+                  }`}
               >
                 <span>{item.label}</span>
                 <ArrowRight className="w-4 h-4 text-[#718096]" />

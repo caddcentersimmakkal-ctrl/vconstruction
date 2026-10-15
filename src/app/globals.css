@@ -99,3 +99,102 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #1769B0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Client logo infinite marquee */
+.clients-marquee {
+  display: flex;
+  width: max-content;
+  animation: clients-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.clients-marquee:hover {
+  animation-play-state: paused;
+}
+
+.clients-marquee-track {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 3rem;
+  padding-right: 3rem;
+}
+
+@keyframes clients-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Section entrance animation */
+@keyframes section-enter {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-section-enter {
+  animation: section-enter 0.7s ease-out both;
+}
+
+/* Staggered statistic cards */
+.stat-card {
+  animation: section-enter 0.7s ease-out both;
+}
+
+.stat-card:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.stat-card:nth-child(3) {
+  animation-delay: 200ms;
+}
+
+.stat-card:nth-child(4) {
+  animation-delay: 300ms;
+}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .clients-marquee,
+  .animate-section-enter,
+  .stat-card {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

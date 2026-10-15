@@ -191,7 +191,7 @@ export default function AboutPage() {
           PAGE HERO
       ====================================================== */}
 
-      <section className="relative overflow-hidden border-b border-[#E5EDF4] bg-gradient-to-r from-[#EAF5FC] to-[#F5FAFE]">
+      {/* <section className="relative overflow-hidden border-b border-[#E5EDF4] bg-gradient-to-r from-[#EAF5FC] to-[#F5FAFE]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
           <div className="max-w-[780px]">
             <div className="flex items-center gap-3 mb-4">
@@ -217,7 +217,7 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* =====================================================
           ABOUT COMPANY — OFFICE IMAGE
@@ -493,7 +493,7 @@ export default function AboutPage() {
           OUR TEAM
       ====================================================== */}
 
-      <section className="py-16 lg:py-24 bg-[#F5FAFE] border-y border-[#E5EDF4]">
+      {/* <section className="py-16 lg:py-24 bg-[#F5FAFE] border-y border-[#E5EDF4]">
 
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -558,13 +558,13 @@ export default function AboutPage() {
 
         </div>
 
-      </section>
+      </section> */}
 
       {/* =====================================================
           AWARDS & ACHIEVEMENTS
       ====================================================== */}
 
-      <section className="py-16 lg:py-24">
+      {/* <section className="py-16 lg:py-24">
 
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -622,7 +622,7 @@ export default function AboutPage() {
 
         </div>
 
-      </section>
+      </section> */}
 
       {/* =====================================================
           OUR PROCESS
