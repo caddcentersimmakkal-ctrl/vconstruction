@@ -47,9 +47,9 @@ export default function ContactPage() {
             <span className="text-[12px] font-bold text-[#1769B0] uppercase tracking-[0.2em]">GET IN TOUCH</span>
             <div className="w-8 h-[2px] bg-[#1769B0]" />
           </div>
-          <h1 className="font-heading text-[36px] sm:text-[48px] font-bold text-[#16283F] leading-tight">
+          {/* <h1 className="font-heading text-[36px] sm:text-[48px] font-bold text-[#16283F] leading-tight">
             Book an Architectural Consultation
-          </h1>
+          </h1> */}
           <p className="text-[#718096] text-[15px] max-w-[620px] mt-2">
             Have an upcoming residential villa, commercial space? Speak directly with our lead architects and project engineers.
           </p>

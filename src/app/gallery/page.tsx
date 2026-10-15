@@ -20,7 +20,7 @@ export default function GalleryPage() {
   return (
     <div className="w-full bg-white">
       {/* PAGE BANNER */}
-      <section className="bg-gradient-to-r from-[#EAF5FC] to-[#F5FAFE] py-14 lg:py-18 border-b border-[#E5EDF4]">
+      {/* <section className="bg-gradient-to-r from-[#EAF5FC] to-[#F5FAFE] py-14 lg:py-18 border-b border-[#E5EDF4]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-2">
             <span className="text-[12px] font-bold text-[#1769B0] uppercase tracking-[0.2em]">GALLERY</span>
@@ -33,7 +33,7 @@ export default function GalleryPage() {
             A visual journal capturing structural form, daylight integration, interior craftsmanship, and geometric details.
           </p>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-12 lg:py-20">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 space-y-10">

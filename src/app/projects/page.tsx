@@ -7,7 +7,7 @@ import { projectsData, Project } from "@/data/projects";
 import { MapPin, ArrowRight, X, Calendar, Layers } from "lucide-react";
 import { CTASection } from "@/components/home/CTASection";
 
-const categories = ["All", "Residential", "Commercial", "Interior", "Renovation", "Architecture"];
+const categories = ["All", "Residential", "Commercial", "Interior", "Plots"];
 
 export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -21,7 +21,7 @@ export default function ProjectsPage() {
   return (
     <div className="w-full bg-white">
       {/* PAGE BANNER */}
-      <section className="bg-gradient-to-r from-[#EAF5FC] to-[#F5FAFE] py-14 lg:py-18 border-b border-[#E5EDF4]">
+      {/* <section className="bg-gradient-to-r from-[#EAF5FC] to-[#F5FAFE] py-14 lg:py-18 border-b border-[#E5EDF4]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-2">
             <span className="text-[12px] font-bold text-[#1769B0] uppercase tracking-[0.2em]">PORTFOLIO</span>
@@ -34,7 +34,7 @@ export default function ProjectsPage() {
             Explore our completed residential villas, corporate office complexes, contemporary interior projects, and structural renovations.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* FILTER BAR & GRID */}
       <section className="py-12 lg:py-20">
